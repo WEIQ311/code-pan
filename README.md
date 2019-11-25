@@ -1,5 +1,5 @@
-# code-pan
-Spring-boot 网盘、云盘
+# 基于Spring-boot和elfinder 的在线文件管理系统
+基于Spring-boot和elfinder的打造在线文件管理系统，可以用于网盘、云盘
 
 1. 支持在线文件下载
 1. 支持目录上传
@@ -8,3 +8,4 @@ Spring-boot 网盘、云盘
 1. 支持在线文件预览
 1. 支持文件夹权限设置
 1. 支持国际化
+1. 支持docker
