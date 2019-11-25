@@ -1,0 +1,47 @@
+# application配置文件
+spring:
+  aop:
+    auto: true
+    proxy-target-class: true
+  application:
+    name: pan
+  data:
+    rest:
+      base-path: /api
+  datasource:
+    name: datasource
+  jackson:
+    date-format:  yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+
+  mvc:
+    locale: zh_CN
+    date-format: yyyy-MM-dd HH:mm:ss
+  profiles:
+    active: dev
+  servlet:
+    multipart:
+      max-file-size: 3GB
+      max-request-size: 1GB
+server:
+  port: 9090
+  servlet:
+    context-path: /${spring.application.name}
+  tomcat:
+    # 解决上传文件丢失问题
+    basedir: ${user.home}/spring-boot/${spring.application.name}/tomcat
+  #客户端Http请求、响应的Header的最大限制
+  max-http-header-size: 10MB
+  #压缩数据传输
+  compression:
+    enabled: true
+    min-response-size: 1024
+    mime-types:
+      - text/html
+      - text/xml
+      - text/plain
+      - text/css
+      - text/javascript
+      - application/javascript
+      - application/json
+      - application/xml

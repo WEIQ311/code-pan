@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <!--根据需要加入有关配置-->
+    <!--http://www.mybatis.org/mybatis-3/zh/configuration.html-->
+    <settings>
+        <!-- 全局映射器启用缓存 -->
+        <setting name="cacheEnabled" value="true" />
+        <!--是否可以使用列名(取决于驱动的兼容性)-->
+        <setting name="useColumnLabel" value="true"/>
+        <!--从经典的数据库列名A_COLUMN启用自动映射到骆驼标识的经典的Java属性名aColumn。-->
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+        <!--设置JDBC类型为空时，某些驱动程序要指定值 default:OTHER-->
+        <setting name="jdbcTypeForNull" value="NULL"/>
+        <!--指定如果setter方法​​或地图的put方法时，将调用检索到的值是null。它是有用的，当你依靠Map.keySet（）或null初始化。注意原语（如整型，布尔等）不会被设置为null。-->
+        <setting name="callSettersOnNulls" value="true"/>
+        <!--指定MyBatis的日志实现使用。如果此设置是不存在的记录的实施将自动查找。-->
+        <!--<setting name="logImpl" value="STDOUT_LOGGING"/>-->
+        <!--在全局范围内启用或禁用延迟加载。禁用时，所有相关联的将热加载。-->
+        <setting name="lazyLoadTriggerMethods" value="equals,clone,hashCode,toString"/>
+    </settings>
+</configuration>
