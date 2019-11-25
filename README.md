@@ -1,4 +1,6 @@
 # 基于Spring-boot和elfinder 的在线文件管理系统
+![jdk](https://img.shields.io/badge/jdk-1.8%2B-orange.svg) ![spring-boot](https://img.shields.io/badge/spring--boot-2.2.1.RELEASE-blue.svg) ![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg) ![docker](https://img.shields.io/badge/docker%20build-passing-brightgreen)
+ 
 基于Spring-boot和elfinder的打造在线文件管理系统，可以用于网盘、云盘
 
 1. 支持在线文件下载
