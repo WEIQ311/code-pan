@@ -17,8 +17,16 @@ spring:
   mvc:
     locale: zh_CN
     date-format: yyyy-MM-dd HH:mm:ss
+    view:
+      prefix: /
+      suffix: .html
+  resources:
+    static-locations: classpath:static/
+  thymeleaf:
+    mode: LEGACYHTML5
   profiles:
     active: dev
+    include: elfinder
   servlet:
     multipart:
       max-file-size: 3GB
