@@ -1,4 +1,23 @@
 #elfinder config
-code:
-  pan:
-    elfinder:
+file-manager:
+  thumbnail:
+    # 缩略图宽
+    width: 80
+  volumes:
+    - Node:
+      # 暂时只支持本地文件系统
+      source: fileSystem
+      # 目录别名
+      alias: 我的文件
+      # 映射目录
+      path: /Users/weiqiang/work/resource/code-pan/logs
+      # 是否默认打开
+      isDefault: true
+      locale:
+      constraint:
+        # 文件夹是否锁定
+        locked: false
+        # 是否可读
+        readable: true
+        # 是否可写
+        writable: true

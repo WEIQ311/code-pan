@@ -16,10 +16,11 @@ spring:
 
   mvc:
     locale: zh_CN
-    date-format: yyyy-MM-dd HH:mm:ss
     view:
       prefix: /
       suffix: .html
+    format:
+      date-time: yyyy-MM-dd HH:mm:ss
   resources:
     static-locations: classpath:static/
   thymeleaf:
@@ -38,6 +39,7 @@ server:
   tomcat:
     # 解决上传文件丢失问题
     basedir: ${user.home}/spring-boot/${spring.application.name}/tomcat
+    uri-encoding: UTF-8
   #客户端Http请求、响应的Header的最大限制
   max-http-header-size: 10MB
   #压缩数据传输

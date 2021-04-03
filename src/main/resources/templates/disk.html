@@ -1,35 +1,35 @@
-<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"  xmlns:th="http://www.thymeleaf.org">
 <head>
     <!-- elFinder CSS (REQUIRED) -->
-    <link rel="stylesheet" type="text/css" th:href="@{/elfinder/css/theme.css}">
-    <script th:src="@{/elfinder/js/jquery-1.11.1.js}"></script>
+    <link rel="stylesheet" type="text/css" href="./elfinder/css/theme.css">
+    <script src="./elfinder/js/jquery-1.11.1.js"></script>
     <!-- elFinder JS (REQUIRED) -->
-    <script th:src="@{/elfinder/js/elfinder.full.js}"></script>
+    <script src="./elfinder/js/elfinder.full.js"></script>
     <!-- elFinder translation (OPTIONAL) -->
-    <script th:src="@{/elfinder/js/i18n/elfinder.zh_CN.js}" charset="utf-8"></script>
-    <script th:src="@{/elfinder/js/extras/quicklook.googledocs.js}"></script>
-    <script th:src="@{/elfinder/ace/ace.js}" type="text/javascript" charset="utf-8"></script>
-    <script th:src="@{/elfinder/ace/ext-modelist.js}" type="text/javascript" charset="utf-8"></script>
-    <script th:src="@{/elfinder/ace/ext-settings_menu.js}"></script>
-    <script th:src="@{/elfinder/jquery-ui-1.12.1.custom/jquery-ui.js}"></script>
+    <script src="./elfinder/js/i18n/elfinder.zh_CN.js" charset="utf-8"></script>
+    <script src="./elfinder/js/extras/quicklook.googledocs.js"></script>
+    <script src="./elfinder/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+    <script src="./elfinder/ace/ext-modelist.js" type="text/javascript" charset="utf-8"></script>
+    <script src="./elfinder/ace/ext-settings_menu.js"></script>
+    <script src="./elfinder/jquery-ui-1.12.1.custom/jquery-ui.js"></script>
 </head>
 <body>
 <div id="elfinder"></div>
 <script type="text/javascript" charset="utf-8">
         // 使用onload加载，否则菜单会不出现
         window.onload = function() {
-            elFinder.prototype.loadCss('/elfinder/jquery-ui-1.12.1.custom/jquery-ui.css');
+            elFinder.prototype.loadCss('./elfinder/jquery-ui-1.12.1.custom/jquery-ui.css');
             $('#elfinder').elfinder({
-                url : '/elfinder/connector',
+                url: './elfinder/connector',
                 lang: 'zh_CN',
-                height : window.innerHeight-20,
+                height: window.innerHeight - 20,
                 commandsOptions: {
                     edit: {
-                        editors : [
+                        editors: [
                             {
-                                info:{
-                                    name:'编辑',
+                                info: {
+                                    name: '编辑',
                                     urlAsContent: false
                                 },
                                 // ACE Editor
@@ -139,7 +139,7 @@
                                                 .prependTo(taBase.next());
 
                                             // Base node of Ace editor
-                                            editorBase = $('<div id="'+id+'" style="width:100%; height:100%;"/>').text(ta.val()).insertBefore(ta.hide());
+                                            editorBase = $('<div id="'+id+'" style="wid100%; height:100%;"/>').text(ta.val()).insertBefore(ta.hide());
 
                                             // Ace editor configure
                                             ta.data('ace', true);

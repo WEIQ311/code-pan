@@ -113,6 +113,7 @@ public class CommonAspect {
         log.debug("url:{},方法:{},请求ip:{},类和方法:{}(),参数:{}", requestURL, request.getMethod(), REQUEST_IP.get(), joinPoint.getSignature().getDeclaringTypeName() + "." + joinPoint.getSignature().getName(), joinPoint.getArgs());
         log.debug("浏览器名称:{},浏览器版本号:{},系统名称:{}", GlobalUtils.getBrowserName(request), GlobalUtils.getBrowserVersion(request), GlobalUtils.getOsName(request));
         response.setHeader("Access-Control-Expose-Headers", TOKEN_HEADER);
+        response.setHeader("Content-Type", " application/json;charset=UTF-8");
     }
 
     /**

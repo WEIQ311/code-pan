@@ -1,5 +1,6 @@
 package com.pan;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -10,6 +11,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @date 2019/11/25
  */
 @SpringBootApplication
+@MapperScan(basePackages = {"com.pan", "cn.ablxyw"})
 public class CodePanApplication {
     public static void main(String[] args) {
         SpringApplication.run(CodePanApplication.class, args);
