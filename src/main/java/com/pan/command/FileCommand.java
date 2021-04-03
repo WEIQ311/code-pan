@@ -46,27 +46,27 @@ import java.nio.charset.StandardCharsets;
 @Service("fileCommand")
 public class FileCommand extends AbstractCommand implements ElfinderCommand {
 
-	public static final String STREAM = "1";
+    public static final String STREAM = "1";
 
-	@Override
-	public void execute(ElfinderStorage elfinderStorage, HttpServletRequest request, HttpServletResponse response) throws Exception {
-		String target = request.getParameter("target");
-		boolean download = STREAM.equals(request.getParameter("download"));
-		VolumeHandler fsi = super.findTarget(elfinderStorage, target);
-		String mime = fsi.getMimeType();
-		response.setCharacterEncoding(StandardCharsets.UTF_8.name());
-		response.setContentType(mime);
-		String fileName = fsi.getName();
-		if (download) {
-			response.setHeader("Content-Disposition", "attachments; " + HttpUtil.getAttachementFileName(fileName, request.getHeader("USER-AGENT")));
-			response.setHeader("Content-Transfer-Encoding", "binary");
-		}
-		OutputStream out = response.getOutputStream();
-		response.setContentLength((int) fsi.getSize());
-		try (InputStream is = fsi.openInputStream()) {
-			IOUtils.copy(is, out);
-			out.flush();
-			out.close();
-		}
-	}
+    @Override
+    public void execute(ElfinderStorage elfinderStorage, HttpServletRequest request, HttpServletResponse response) throws Exception {
+        String target = request.getParameter("target");
+        boolean download = STREAM.equals(request.getParameter("download"));
+        VolumeHandler fsi = super.findTarget(elfinderStorage, target);
+        String mime = fsi.getMimeType();
+        response.setCharacterEncoding(StandardCharsets.UTF_8.name());
+        response.setContentType(mime);
+        String fileName = fsi.getName();
+        if (download) {
+            response.setHeader("Content-Disposition", "attachments; " + HttpUtil.getAttachementFileName(fileName, request.getHeader("USER-AGENT")));
+            response.setHeader("Content-Transfer-Encoding", "binary");
+        }
+        OutputStream out = response.getOutputStream();
+        response.setContentLength((int) fsi.getSize());
+        try (InputStream is = fsi.openInputStream()) {
+            IOUtils.copy(is, out);
+            out.flush();
+            out.close();
+        }
+    }
 }

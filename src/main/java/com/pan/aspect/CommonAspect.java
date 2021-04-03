@@ -29,14 +29,6 @@ import static com.pan.constants.GlobalConstants.TOKEN_HEADER;
 public class CommonAspect {
 
     /**
-     * 开始时间,用于记录请求耗时
-     */
-    private static ThreadLocal<Long> BEGIN_TIME = new ThreadLocal<>();
-    /**
-     * 请求Url
-     */
-    private static ThreadLocal<String> REQUEST_URL = new ThreadLocal<>();
-    /**
      * 请求IP
      */
     public static ThreadLocal<String> REQUEST_IP = new ThreadLocal<>();
@@ -48,7 +40,14 @@ public class CommonAspect {
      * authorization
      */
     public static ThreadLocal<Integer> REQUEST_PORT = new ThreadLocal<>();
-
+    /**
+     * 开始时间,用于记录请求耗时
+     */
+    private static ThreadLocal<Long> BEGIN_TIME = new ThreadLocal<>();
+    /**
+     * 请求Url
+     */
+    private static ThreadLocal<String> REQUEST_URL = new ThreadLocal<>();
 
     /**
      * 请求之后拦截

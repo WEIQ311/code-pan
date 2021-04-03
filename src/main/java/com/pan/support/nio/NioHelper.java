@@ -409,6 +409,7 @@ public final class NioHelper {
         private final MatchMode mode;
         private final boolean ignoreCase;
         private final List<Path> foundPaths;
+
         public FileTreeSearch(String query, MatchMode mode, boolean ignoreCase) {
             this.query = query;
             this.mode = mode;
