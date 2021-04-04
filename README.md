@@ -16,14 +16,14 @@
 
 1. 操作
 
-   ![屏幕录制2021-04-04 上午10.27.36 00_00_00-00_00_30](./file/images/operating.gif)
+   ![operating](./file/images/operating.gif)
 
 1. 上传文件
 
-![image-20210404102332268](./file/images/image-20210404102332268.png)
+![上传文件](./file/images/image-20210404102332268.png)
 
 2. 文件预览
 
-![image-20210404102504504](./file/images/image-20210404102504504.png)
+![文件预览](./file/images/image-20210404102504504.png)
 
-![image-20210404102713449](./file/images/image-20210404102713449.png)
+![文件预览](./file/images/image-20210404102713449.png)
