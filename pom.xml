@@ -36,7 +36,7 @@
         <commons-compress.version>1.11</commons-compress.version>
         <commons-io.version>2.4</commons-io.version>
         <joda-time.version>2.9.2</joda-time.version>
-        <tika.version>(1.22,]</tika.version>
+        <tika.version>1.22</tika.version>
         <java-image-scaling.version>0.8.6</java-image-scaling.version>
     </properties>
 
