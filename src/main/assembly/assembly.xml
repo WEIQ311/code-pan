@@ -10,6 +10,9 @@
     <fileSet>
       <directory>src/main/assembly/bin</directory>
       <outputDirectory>./</outputDirectory>
+      <excludes>
+        <exclude>docker-*.sh</exclude>
+      </excludes>
     </fileSet>
     <fileSet>
       <directory>src/main/resources/config</directory>

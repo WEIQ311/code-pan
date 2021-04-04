@@ -10,7 +10,7 @@ file-manager:
       # 目录别名
       alias: 我的文件
       # 映射目录
-      path: /Users/weiqiang/work/resource/code-pan/logs
+      path: ${user.home}/spring-boot/${spring.application.name}/file
       # 是否默认打开
       isDefault: true
       locale:
