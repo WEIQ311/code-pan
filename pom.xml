@@ -33,7 +33,7 @@
         <quick.version>1.0.1</quick.version>
         <commons-codec.version>1.10</commons-codec.version>
         <commons-fileupload.version>1.3.3</commons-fileupload.version>
-        <commons-compress.version>1.19</commons-compress.version>
+        <commons-compress.version>1.21</commons-compress.version>
         <commons-io.version>2.4</commons-io.version>
         <joda-time.version>2.9.2</joda-time.version>
         <tika.version>1.22</tika.version>
